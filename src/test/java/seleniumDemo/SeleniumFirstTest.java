@@ -1,15 +1,16 @@
 package seleniumDemo;
 
 import java.time.Duration;
-import java.util.concurrent.TimeUnit;
 
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
@@ -32,6 +33,7 @@ public class SeleniumFirstTest {
 		cOptions.setCapability("network.cookie.cookieBehaviour", true);
 		cOptions.setCapability("profile.block_third_party_cookies", false);
 		
+		driver = new ChromeDriver(cOptions);
 		driver.manage().window().setSize(new Dimension(1366, 768));
 	}
 	
@@ -47,7 +49,7 @@ public class SeleniumFirstTest {
 	
 	@Test
 	public void findKittens() {
-		
+
 	}
 	
 	@AfterClass
